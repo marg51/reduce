@@ -36,7 +36,7 @@ export const chain = object => {
             }
 
             return (...args) => {
-                this.functions.push([self[name], args])
+                this.functions.push([self[name] || identity, args])
 
                 return proxy
             }
